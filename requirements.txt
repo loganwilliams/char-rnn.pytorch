@@ -1,0 +1,7 @@
+torch
+torchnn
+argparse
+urllib2
+tqdm
+unidecode
+
