@@ -31,12 +31,7 @@ args = argparser.parse_args()
 if args.cuda:
     print("Using CUDA")
 
-import urllib2
-response = urllib2.urlopen('https://gist.githubusercontent.com/loganwilliams/6d14323cb68c8673ab10193d0e95566c/raw/c439225249371d0d60ec812635983b20f7b33608/parks.txt')
-file = response.read()
-print(file)
-file_len = len(file)
-# file, file_len = read_file(args.filename)
+file, file_len = read_file(args.filename)
 
 def random_training_set(chunk_len, batch_size):
     inp = torch.LongTensor(batch_size, chunk_len)
